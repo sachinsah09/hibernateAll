@@ -1,0 +1,24 @@
+package HibernateProjectImp;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity  
+@Table(name="addresshiber")  
+public class AddressDetails {
+	
+	@Id  
+    private int a_id;  
+	private int a_city;
+
+	public int getA_id() {
+		return a_id;
+	}
+	public void setA_id(int a_id) {
+		this.a_id = a_id;
+	}
+	
+	
+
+}

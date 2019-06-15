@@ -1,0 +1,30 @@
+package HibernateProject;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+public class HiberMain {
+
+	public static void main(String args[])
+	{
+		
+		UserDetails ud = new UserDetails();
+		ud.setUserId(101);
+		ud.setUserName("sachin");
+		ud.setUserId(103);
+		ud.setUserName("parth");
+		
+		
+
+		SessionFactory sessionFactory =  new Configuration().configure().buildSessionFactory();
+		
+		
+		Session session=sessionFactory.openSession();
+		 session.beginTransaction();
+		 session.save(ud);
+		 session.getTransaction().commit();
+	
+	}
+	
+}

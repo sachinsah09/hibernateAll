@@ -1,0 +1,5 @@
+package HIbernateRelation;
+
+public class StudentM2M {
+
+}

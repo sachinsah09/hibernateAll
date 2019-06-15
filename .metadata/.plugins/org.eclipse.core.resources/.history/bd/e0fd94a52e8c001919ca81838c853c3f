@@ -1,0 +1,20 @@
+    import java.util.*;  
+    import java.util.stream.Collectors;  
+    
+    interface Product{  
+        
+    	void add(int x,int y);
+    
+    }
+    
+    
+    public class Test {  
+        public static void main(String[] args) {  
+
+        		Test t=new Test();
+        		Product i = (x,y) ->  { int z=(x*y);
+        		System.out.println(z);
+        		};
+        
+        		}  
+    }

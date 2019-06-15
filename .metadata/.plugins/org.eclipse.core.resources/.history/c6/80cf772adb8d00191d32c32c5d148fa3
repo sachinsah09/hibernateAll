@@ -1,0 +1,53 @@
+package HIbernateRelation;
+
+import java.util.HashSet;
+import java.util.Set;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+public class AppMainM2M {
+
+
+	 
+    public static void main(String[] args) {
+        System.out.println(".......Hibernate One To Many Mapping Example.......\n");
+
+      	  //Create session factory object
+        	 //Create session factory object
+      	  SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
+      	  //getting session object from session facto
+      	  Session session = sessionFactory.openSession();
+      	  //getting transaction object from session object
+      	 session.beginTransaction();
+      	  
+            StudentM2M student= new StudentM2M(1,  "Sachin Sah", 80);
+         
+           
+            CourseM2M course = new CourseM2M(1,"Btech(CSE)",2);
+            CourseM2M course1 = new CourseM2M(2,"Btech(CSE)",2);
+            
+              
+            
+
+    		Set s =new HashSet();
+    		      s.add(course);
+    		      s.add(course1);
+    	
+    		      
+    		     
+           
+    		      student.setCourses(s);
+    		      student.setCourses(s);
+           
+            session.save(student);
+            
+            // Committing The Transactions To The Database
+            session.getTransaction().commit();
+            session.close();
+            sessionFactory.close();
+ 
+            System.out.println("\n.......Records Saved Successfully To The Database.......");
+    }
+}

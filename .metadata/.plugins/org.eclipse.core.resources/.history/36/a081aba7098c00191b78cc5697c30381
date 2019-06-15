@@ -1,0 +1,19 @@
+interface Drawable {
+	
+	public void draw();
+
+}
+
+
+public class Test{
+	
+	public static void main(String s[])
+	{
+		int width =20;
+		
+		Drawable d2=() -> {	System.out.println("drawable ="+width);
+	};
+		d2.draw();
+	}
+	
+}

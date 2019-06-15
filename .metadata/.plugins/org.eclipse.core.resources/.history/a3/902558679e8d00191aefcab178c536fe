@@ -1,0 +1,5 @@
+ackage HibernateCRUD;
+
+public @interface Entity {
+
+}

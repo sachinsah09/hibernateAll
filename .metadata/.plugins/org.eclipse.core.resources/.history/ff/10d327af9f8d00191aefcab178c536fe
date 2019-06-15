@@ -1,0 +1,5 @@
+ackage org.hibernate.cfg;
+
+public @interface AnnotationConfiguration {
+
+}

@@ -1,0 +1,5 @@
+package HibernateCRUD;
+
+public class UpdateStudent {
+
+}

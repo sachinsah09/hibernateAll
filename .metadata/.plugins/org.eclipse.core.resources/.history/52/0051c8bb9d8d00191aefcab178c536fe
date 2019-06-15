@@ -1,0 +1,5 @@
+package HibernateProject;
+
+public class DbOperations {
+
+}
